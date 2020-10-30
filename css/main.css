@@ -1,52 +1,91 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-family: 'Helvetica Neue','sans-serif';
-	display: block;
-	margin: auto;
+@import url(https://fonts.googleapis.com/css2?family=Roboto);
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
 }
 
-
-body{
-	background-image: url("../img/Image.jpg");
-	backgoundn-size: cover;
-	background-repeat: no-repeat;
-	padding-attachment: fixed;
-}
-section{
-	width: 1170px;
+h1, h2 { 
+    margin: 0; 
+    text-shadow: 0 2px rgba(0,0,0,.5);
 }
 
-.header__text{
-	width: 1170px;
+a {
+    color: #fff;
+    text-decoration: none;
 }
-.header__text h1{
-    color: #8A23AB;
-    font-weight: 700;
-    font-size: 60px;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: table;
+    z-index: -1;
+}
+  
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(33, 33, 33, 0.75);
+}
+  
+.header_bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../images/background.png") center center no-repeat;
+    background-size: cover;
+}
+  
+.header__content {
+    position: relative;
     text-align: center;
-    padding-top: 100px;
-    line-height: 1em;
-}
-.header__text p{
-    color: #8734B1;
-    font-size: 24px;
-    font-weight: 300;
-    text-align: center;
-    padding-bottom: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 2;
 }
 
-.main-image img{
-	box-shadow: 1px 1px 21px 0px;
+.content { 
+    margin-top: 100vh;
+    height: 100vh;
+    padding: 50px;
+    background: #212121;
 }
-.main-text{
-	background-color: white;
-	text-align: center;
+
+.container {
+    margin: 0 auto;
+    width: 800px;
 }
-.main-text__head h2{
-	padding-top: 60px;
-	font-weight: 700;
-	font-size: 25px;
-	padding-bottom: 10px;
-	text-align: center
+
+.nav {
+    margin: 20px auto;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(33, 33, 33, 0.9);
+}
+
+.nav__item {
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #bdbdbd;
+}
+
+.nav__item_active {
+    color: #fff;
 }
