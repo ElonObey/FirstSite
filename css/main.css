@@ -89,3 +89,8 @@ a {
 .nav__item_active {
     color: #fff;
 }
+.subtitle{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
